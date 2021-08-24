@@ -140,6 +140,11 @@ Make sure that the Android NDK is installed (From SDK Manager in Android Studio)
 and after that, the build script build our rust crate for all of these targets using [`cargo-ndk`](https://github.com/bbqsrc/cargo-ndk)
 and symbol link our rust lib to the right place, and it just works :)
 
+Note: Current version of NDK (r23) does not ship with GCC anymore, and the compilation fails. Instead, install earlier version of NDK (r22).
+```sh
+export ANDROID_NDK_HOME=~/Library/Android/sdk/ndk/22.1.7171670
+```
+
 ## See also
 
 - [Dart Meets Rust: a match made in heaven ✨](https://dev.to/sunshine-chain/dart-meets-rust-a-match-made-in-heaven-9f5)
